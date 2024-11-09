@@ -16,6 +16,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarceloRodriguesOliveira/matchello"
+  },
   "keywords": [],
   "author": "git config --global user.name MarceloRodriguesOliveira",
   "license": "ISC",
