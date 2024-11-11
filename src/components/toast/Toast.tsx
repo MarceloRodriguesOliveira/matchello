@@ -7,6 +7,8 @@ import {
   FaTimesCircle,
 } from "react-icons/fa";
 
+import { FaX } from "react-icons/fa6";
+
 type actionType = "success" | "error" | "warn" | "info";
 
 export type ToastProps = {
@@ -20,7 +22,6 @@ const StyledToastWrapper = styled.div<ToastProps>`
 `;
 
 const StyledToastNotification = styled.div<ToastProps>`
-  width: 100%;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -50,11 +51,12 @@ const StyledToastIcon = styled.div<ToastProps>`
           : "#2F86EB"};
   display: flex;
   justify-content: center;
-  font-size: 32px;
+  font-size: 36px;
 `;
 
 const StyledToastMessage = styled.div`
   width: 100%;
+  word-break: break-all;
   color: #656565;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -69,6 +71,17 @@ const iconType: Record<actionType, JSX.Element> = {
   info: <FaInfoCircle />,
 };
 
+const CloseButton = styled.button`
+  background-color: transparent;
+  color: #656565;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 14px;
+`;
+
 const Toast: React.FC<ToastProps> = ({ text, type, mobile }) => {
   return (
     <StyledToastWrapper mobile={mobile}>
@@ -79,6 +92,9 @@ const Toast: React.FC<ToastProps> = ({ text, type, mobile }) => {
         <StyledToastMessage>
           <p>{text}</p>
         </StyledToastMessage>
+        <CloseButton>
+          <FaX />
+        </CloseButton>
       </StyledToastNotification>
     </StyledToastWrapper>
   );
