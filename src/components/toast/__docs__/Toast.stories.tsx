@@ -45,10 +45,10 @@ export const Info: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      <ToastExample text="Success!" type="success" mobile="desktop" />
-      <ToastExample text="Warning!" type="warn" mobile="desktop" />
-      <ToastExample text="Error!" type="error" mobile="desktop" />
-      <ToastExample text="Info!" type="info" mobile="desktop" />
+      <ToastExample text="Success" type="success" mobile="desktop" />
+      <ToastExample text="Warning" type="warn" mobile="desktop" />
+      <ToastExample text="Error" type="error" mobile="desktop" />
+      <ToastExample text="Info" type="info" mobile="desktop" />
     </div>
   ),
 };
