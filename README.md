@@ -1,4 +1,4 @@
-# Biblioteca de componentes Matchello
+# Biblioteca de componentes matchello
 
 ### Sobre o projeto
 
